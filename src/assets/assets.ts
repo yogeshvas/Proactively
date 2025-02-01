@@ -1,0 +1,25 @@
+const assets = {
+  logo: require('./images/proactively-logo.png'),
+  hideEye: require('./icons/hide-eye.png'),
+  showEye: require('./icons/show-eye.png'),
+  avatar: require('./images/avatar.png'),
+  bell: require('./icons/bell.png'),
+  bgLogo: require('./images/bg-logo.png'),
+  slider: require('./images/slider.png'),
+  arrowRight: require('./icons/arrow-right.png'),
+  arrowRightBlue: require('./icons/arrow-right-blue.png'),
+  arrowRightYellow: require('./icons/arrow-right-yellow.png'),
+  arrowRightOrange: require('./icons/arrow-right-orange.png'),
+  back: require('./icons/back-icon.png'),
+  link: require('./icons/link-icon.png'),
+  doctor: require('./images/doctor.png'),
+  add: require('./icons/add.png'),
+  home: require('./icons/home.png'),
+  homeSelected: require('./icons/home-selected.png'),
+  account: require('./icons/account.png'),
+  accountSelected: require('./icons/account-selected.png'),
+  minus: require('./icons/minus.png'),
+  sleep: require('./icons/sleep.png'),
+} as const;
+
+export default assets;
