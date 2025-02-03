@@ -32,10 +32,26 @@ interface CheckboxProps {
   onPress: () => void;
 }
 
+interface RemoteMessage {
+  notification?: {
+    title?: string;
+    body?: string;
+  };
+}
+export type RootStackParamList = {
+  login: undefined;
+  'home-tabs': undefined;
+  appoinment: undefined;
+  bmi: undefined;
+  steps: undefined;
+  sleep: undefined;
+};
+
 export type {
   ButtonProps,
   ShowToast,
   HealthState,
   ProgressBarProps,
   CheckboxProps,
+  RemoteMessage,
 };

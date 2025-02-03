@@ -31,6 +31,7 @@ function HomeTabs() {
           fontSize: 12,
           fontFamily: Fonts.iMedium,
         },
+        
         tabBarActiveTintColor: Colors.purple, // Purple color for selected state
         tabBarInactiveTintColor: Colors.gray, // Gray color for unselected state
       }}>

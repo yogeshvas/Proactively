@@ -5,6 +5,7 @@ import {
   View,
   TouchableOpacity,
   Linking,
+  Platform,
 } from 'react-native';
 import React from 'react';
 import {Colors} from '../../styles/color';
@@ -14,7 +15,17 @@ import Button from '../../components/Button';
 import {doctorData} from '../../data/data';
 const Appointment = () => {
   const handleJoinMeeting = () => {
-    Linking.openURL('https://www.meet.google.com/abc-defa-dwa');
+    const meetingCode = 'abc-defa-dwa';
+    const googleMeetAppURL = `https://meet.google.com/${meetingCode}`;
+    const googleMeetDeepLink = `meet://meet.google.com/${meetingCode}`;
+
+    if (Platform.OS === 'android') {
+      Linking.openURL(googleMeetDeepLink).catch(() => {
+        Linking.openURL(googleMeetAppURL);
+      });
+    } else {
+      Linking.openURL(googleMeetAppURL);
+    }
   };
 
   return (
@@ -153,12 +164,14 @@ const styles = StyleSheet.create({
   },
   meetingLinkLabel: {
     fontSize: 14,
-    color: '#666',
+    fontFamily: Fonts.iSemiBold,
+    fontWeight: 600,
+    color: Colors.black,
     marginBottom: 4,
   },
   meetingLinkText: {
     fontSize: 14,
-    color: '#333',
+    color: Colors.gray,
     fontFamily: Fonts.iMedium,
   },
 });

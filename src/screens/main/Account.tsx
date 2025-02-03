@@ -6,13 +6,28 @@ import {
   Image,
   TouchableOpacity,
   SafeAreaView,
+  Alert,
 } from 'react-native';
 import assets from '../../assets/assets';
 import {userData} from '../../data/data';
 import {Colors} from '../../styles/color';
 import {Fonts} from '../../styles/font';
+import showToast from '../../utils/toast';
+import {removeData} from '../../utils/async-cruds';
 
-const Account = () => {
+const Account = ({navigation}: {navigation: any}) => {
+  const handleLogout = async () => {
+    try {
+      await removeData('user');
+      showToast('Logged Out Successfully');
+      navigation.reset({
+        index: 0,
+        routes: [{name: 'login'}], // Redirect to login screen
+      });
+    } catch (error) {
+      showToast('Error Logging Out');
+    }
+  };
   return (
     <SafeAreaView style={styles.container}>
       {/* Profile Section */}
@@ -34,7 +49,7 @@ const Account = () => {
           <Text style={styles.optionHeaderText}>Account</Text>
         </View>
 
-        <TouchableOpacity style={styles.logoutButton}>
+        <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
           <Text style={styles.logoutText}>Log out</Text>
           <Text style={styles.chevron}>›</Text>
         </TouchableOpacity>
@@ -79,7 +94,7 @@ const styles = StyleSheet.create({
     color: Colors.gray,
     fontFamily: Fonts.iMedium,
 
-  marginTop: 4,
+    marginTop: 4,
   },
   optionsContainer: {
     paddingHorizontal: 20,

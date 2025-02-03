@@ -83,8 +83,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   avatar: {
-    width: 50,
-    height: 50,
+    width: 45,
+    resizeMode: 'contain',
+    height: 45,
   },
   bell: {
     width: 20,

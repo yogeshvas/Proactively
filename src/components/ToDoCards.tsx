@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
   container: {
     padding: 20,
     backgroundColor: Colors.white,
-    marginBottom: 10,
+    paddingBottom: 80,
   },
   header: {
     borderTopWidth: 1,
@@ -199,6 +199,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '500',
     marginBottom: 8,
+    fontFamily: Fonts.iSemiBold,
     color: Colors.black,
   },
   authorContainer: {
@@ -219,6 +220,6 @@ const styles = StyleSheet.create({
     color: Colors.gray,
   },
   completedTitle: {
-    color: '#666',
+    color: Colors.gray,
   },
 });

@@ -15,7 +15,6 @@ import assets from '../../assets/assets';
 import Button from '../../components/Button';
 import {Fonts} from '../../styles/font';
 import {storeData} from '../../utils/async-cruds';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Login: React.FC = ({navigation}: any) => {
   const [passwordVisible, setPasswordVisible] = useState<boolean>(false);
