@@ -16,7 +16,8 @@ GitHub: https://github.com/yogeshvas/Proactively
 - The Whole app uses a single button and its functionalty is passed based on Props.
 - App uses a single store for everything.
 - Colors have a seperate files since same pallete was used everywhere to reduce hardcoding for it.
-- built on typescript so custom types are defined seperately.
+- Built on typescript so custom types are defined seperately.
+- Used Zutand for state Management.
 (wasn't able to check the notification part in IOS since it requires developer account for access token)
 
 
