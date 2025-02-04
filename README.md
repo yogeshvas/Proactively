@@ -12,7 +12,6 @@ GitHub: https://github.com/yogeshvas/Proactively
 ## Notes
 - Fully tested and working on both Android & iOS.
 - Smooth navigation, persistent data, and interactive UI elements.
-- Built as part of **Proactively** coding assignment.
 - The Whole app uses a single button and its functionalty is passed based on Props.
 - App uses a single store for everything.
 - Colors have a seperate files since same pallete was used everywhere to reduce hardcoding for it.
