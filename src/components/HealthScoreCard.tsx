@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
   bgImage: {
     position: 'absolute',
     resizeMode: 'contain',
-    width: 200, // Adjust size as needed
+    width: 200, 
     height: 200,
     // zIndex: 2, // Ensure background is behind content
   },
